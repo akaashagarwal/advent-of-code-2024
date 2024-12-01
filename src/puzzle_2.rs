@@ -7,8 +7,7 @@ pub fn solve_puzzle_2() -> u64 {
     let input_str =
         read_to_string("src/input/puzzle_1.txt").expect("Failed to read the input file.");
 
-    let lines = input_str.split_terminator("\n").collect::<Vec<&str>>();
-    for line in lines {
+    for line in input_str.split_terminator("\n") {
         let id_pair = line
             .split_ascii_whitespace()
             .map(|id| id.parse::<u64>().unwrap())
